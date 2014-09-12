@@ -1,0 +1,99 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/search.css">
+		<link rel="stylesheet" type="text/css" href="css/nav.css">
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('li').hover(function() {
+					$(this).find('ul>li').stop().fadeToggle(300);
+				});
+				
+				$("#showresults").click(function(){
+	   				 $(".search_results").show();
+	 			});
+				
+				// $('.search_results').hide('fast');
+			});
+			
+			/*function showResults()
+			{
+				//$("#showresults").click(function(){
+	   			//	 $(".search_results").show();
+	 			// });
+			
+				$(".search_results").toggle();
+			}*/
+		</script>
+		<?php include 'connect.php'; >
+		<?php include ‘functions.php’; >
+
+		<title>Search</title>
+	</head>
+	<body>
+		<header>
+			<img src="images/matchlogo.jpg" alt="Logo" height="50" width="200"/>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="account.html">Account</a></li>
+				<li><a href="viewprofile.html">Profile</a>
+				<ul>
+					<li><a href="viewprofile.html">View Profile</a></li>
+					<li><a href="editprofile.html">Edit Profile</a></li>
+				</ul> </li>
+				<li><a href="viewgroup.html">Groups</a>
+				<ul>
+					<li><a href="viewgroup.html">View Groups</a></li>
+					<li><a href="editgroup.html">Edit Groups</a></li>
+				</ul> </li>
+				<li><a href="search.html">Search</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</nav>
+		<div class="searchbar">
+			<form action="#">
+				<label>Choose your class below: </label><br>
+				<select>
+					<option value=""> --Select-- </option>
+					
+				<?php
+					
+					// Query database for course list
+					$list=mysqli_query("select * from courses");
+					
+					// get row of table
+					while($row_list=mysql_fetch_assoc($list)){
+					   ?>
+					   		// Print out course 
+					   		<option value="<? echo $row_list['course_id'] ?>">
+					   			<? echo $row_list['col_name'];?>
+					   		</option>
+					   <?
+					}
+					?>
+				?>
+				</select> <br>
+					<input type="radio" name="search" value="individual_search">Individuals Only
+					<input type="radio" name="search" value="group_search">Groups Only
+				    <input type="radio" name="search" value="both_search">Both
+				    <br>
+				    <input id="showresults" type="submit" value="Search">
+				</form>
+			</div>
+		</div>
+		<div class ="search_results">
+			<div id="student_results">
+				<h1>Available Students </h1>
+			</div>
+			<div id="group_results">
+				<h1>Available Groups </h1>
+			</div>
+		</div>	
+		<footer>
+			<p>&#169; Team MatchMaking</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,124 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('li').hover(function() {
+					$(this).find('ul>li').stop().fadeToggle(300);
+				});
+				</script>
+	<meta http-equiv="Content-Type" 
+             content="text/html; charset=iso-8859-1" />
+    <title>Full Row Select</title>
+    <script type="text/javascript">
+    function ChangeColor(tableRow, highLight)
+    {
+		if (!highLight)
+		{
+			tableRow.style.backgroundColor = '#cebf98';
+		}
+		else
+		{
+			tableRow.style.backgroundColor = 'grey';
+		}
+	}
+
+  function DoNav(theUrl)
+  {
+	document.location.href = theUrl;
+  }
+  function Modify(theURL)
+  {
+	document.getElementById("demo").innerHTML="Hello World";
+	document.location.href = theUrl;
+  }
+  
+  //function Delete();
+  
+  </script>
+	
+</head>
+<body>
+	<header>
+			<img src="images/matchlogo.jpg" alt="Logo" height="50" width="200"/>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="account.html">Account</a></li>
+				<li><a href="viewprofile.html">Profile</a>
+				<ul>
+					<li><a href="viewprofile.html">View Profile</a></li>
+					<li><a href="editprofile.html">Edit Profile</a></li>
+				</ul> </li>
+				<li><a href="viewgroup.html">Groups</a>
+				<ul>
+					<li><a href="viewgroup.html">View Groups</a></li>
+					<li><a href="editgroup.html">Edit Groups</a></li>
+				</ul> </li>
+				<li><a href="search.html">Search</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</nav>
+
+	<form class="well">
+		<form action=".php" method="post">
+	  
+	<h1> Manage/Create Profiles</h1>  
+	  
+	  <h3> My Profiles</h3>
+			</div>
+			
+			<table class="table table-bordered">
+			<tr>
+			  <td>#</td>
+			  <td>Profile Name</td>		
+			  <td>Description</td>
+			  <td>Manage</td>
+			 </tr>
+			<tr onmouseover="ChangeColor(this, true);" onmouseout="ChangeColor(this, false);" >
+			  <td>1</td>
+			  <td style="text-align:center;"><a href="http://www.facebook.com/">Facebook</a></td>		
+			  <td>94</td>
+			  <td>
+				
+				<input type=button  class="btn btn-success" onClick="location.href='editprofile.html'" value='Modify'>
+				<input type=button class="btn btn-danger" onclick="Modify('http://www.google.com/');" value='Delete' ></br>
+			
+			  </td>
+			</tr>
+			<tr onmouseover="ChangeColor(this, true);" onmouseout="ChangeColor(this, false);" >
+			  <td>1</td>
+			  <td style="text-align:center;"><a href="http://www.google.com/">Google</a></td>		
+			  <td>94</td>
+			  <td>
+				
+				<input type=button  class="btn btn-success" onClick="location.href='editprofile.html'" value='Modify'>
+				<input type=button class="btn btn-danger" onclick="Modify('http://www.google.com/');" value='Delete' ></br>
+			
+			  </td>
+			</tr>
+			<tr onmouseover="ChangeColor(this, true);" onmouseout="ChangeColor(this, false);" >
+			  <td>1</td>
+			  <td style="text-align:center;"><a href="http://www.youtube.com/">YouTube</a></td>		
+			  <td>94</td>
+			  <td>
+				
+				<input type=button  class="btn btn-success" onClick="location.href='editprofile.html'" value='Modify'>
+				<input type=button class="btn btn-danger" onclick="Modify('http://www.google.com/');" value='Delete' ></br>
+			
+			  </td>
+			</tr>
+			</table>
+	  <p id="demo"></p>
+	  
+	  </form>
+	</form>
+	<footer>
+			<p>&#169; Team MatchMaking</p>
+		</footer>
+	<script src="js/bootstrap.js"></script>
+</body>
+</html>

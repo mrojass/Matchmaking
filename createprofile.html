@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/> 
+	<!--<link type="text/css" rel="stylesheet" href="css/standardheadercss.css"/>-->
+	<!--<link type="text/css" rel="stylesheet" href="css/style/search.css"/> -->
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('li').hover(function() {
+					$(this).find('ul>li').stop().fadeToggle(300);
+				});
+				
+		</script>
+	<script type="text/javascript">
+   
+  function DoNav(theUrl)
+  {
+	document.location.href = theUrl;
+  }
+  </script>
+	
+	
+	
+</head>
+<body>
+	<header>
+			<img src="images/matchlogo.jpg" alt="Logo" height="50" width="200"/>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="account.html">Account</a></li>
+				<li><a href="viewprofile.html">Profile</a>
+				<ul>
+					<li><a href="viewprofile.html">View Profile</a></li>
+					<li><a href="editprofile.html">Edit Profile</a></li>
+				</ul> </li>
+				<li><a href="viewgroup.html">Groups</a>
+				<ul>
+					<li><a href="viewgroup.html">View Groups</a></li>
+					<li><a href="editgroup.html">Edit Groups</a></li>
+				</ul> </li>
+				<li><a href="search.html">Search</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</nav>
+
+
+
+	<form class="well">
+			<form action=".php" method="post">
+			
+		<h1> Create Your Profile By Filling the Following Information </h1>	
+		
+		<img src="userpic.jpg" alt="User Picture" height="150" width="125" style="position:absolute; left:400px">
+		
+		<!-- CODE TO UPLOAD PICTURE, NOT NCESSARY HERE" WE ARE USING THE ONE ADDED IN THE CREATE ACCOUNT"
+		<div class="form-group" style="position:absolute; left:400px ; top:290px">
+		<input type="file" id="exampleInputFile">
+		</div>	-->
+		
+		<label> Name of the Profile</label><br/>
+		<input type="text" class="span3" placeholder="Put the name of the profile here..." /><br/>		<!-- ADD photo here -->
+		<br/>
+		
+		<label> Show Email</label><br/>
+		<input type="radio" name="email" value="Yes" /> Yes<br />
+		<input type="radio" name="email" value="No" /> No<br />
+		<br/>
+		
+		<label> Display picture to public?</label><br/>
+		<input type="radio" name="picture" value="Yes" /> Yes<br />
+		<input type="radio" name="picture" value="No" /> No<br />
+		<br/>
+		
+		<label> Enter Brief Description of yourself </label>
+		<p>
+          <TEXTAREA name=briefdescription rows=5 cols=60></TEXTAREA>
+		</p>		
+		<br/>
+		
+		<label>Select Courses</label><br/>
+		<select>
+		  <option>Milk</option>
+		  <option>Coffee</option>
+		  <option>Tea</option>
+		</select>
+		<br/><br/>
+		
+		
+		<button class="btn btn-primary">Submit</button>
+		<button class="btn">Clear</button>
+		<input type=button  class="btn btn-danger" onClick="location.href='accountsummary.html'" value='Cancel'>
+		</form>
+	</form>
+	<footer>
+			<p>&#169; Team MatchMaking</p>
+		</footer>
+	<script src="js/bootstrap.js"></script>
+</body>
+</html>
+

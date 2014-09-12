@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>MatchMaking</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="style/style1.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+ 
+<body class="body">
+<header class="mainHeader">
+<img src="matchlogo.jpg">
+<nav><ul>
+<li><a href="#"> Home</a></li>
+<li><a href="#"> Account</a></li>
+<li><a href="#"> Profiles</a></li>
+<li><a href="#"> Groups</a></li>
+<li><a href="#"> Search</a></li>
+<li><a href="#"> Contact Us</a></li>
+</ul></nav>
+</header>
+
+<div class="mainContent">
+<div class="content">
+<article class="topcontent">
+<header>
+<h2><a href="#" title="first post"> SEARCH </a><h2>
+</header>
+<footer>
+<p class="post-info">Please enter the information below</p>
+</footer>
+
+<content>
+<form action="getsearch.php" method="post">
+    Course Number: <input type="text" name="course_number" /><br />
+	<input type="radio" name="condition" value="individuals" required />Individuals <input type="radio" name="condition" value="groups"/>Groups 
+	<input type="radio" name="condition" value="both"/>ALL<br />
+<input type="submit" value="Search" />
+</content>
+</article>
+
+<article class="bottomcontent">	
+					<header>
+						<h2><a href="#" rel="bookmark" title="Permalink to this POST TITLE">Individuals:</a></h2>
+					</header>					
+					<content>
+						<img src="images/individual1.jpg" height="200" width="400">
+					</content>
+				
+				</article>
+</div>
+
+
+				
+				<aside class="middle-sidebar">
+					<article>
+					<header>
+						<h2><a href="#" rel="bookmark" title="Permalink to this POST TITLE">Groups: </a></h2>
+					</header>
+					<content>
+						<img src="images/group1.jpg" height="200" width="400">
+					</content>
+				    </article>
+				</aside>				
+</div>
+
+<footer class="mainfooter">
+<p> Copyright </p>
+</footer>
+
+</body>
+</html>
